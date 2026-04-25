@@ -26,12 +26,13 @@ h1, h2, h3 {
   background-color: var(--bg);
   display: flex; 
   justify-content: center;
-  background-image: url(bg-cafe-lg.jpg);
+  background-image: url('/bg-cafe-lg.jpg');
   background-size: 100% 20%;
   background-position: top ;
   background-repeat: no-repeat;
+  overflow-x: hidden;
   @media screen and (width < 460px) {
-    background-image: url(bg-cafe-sm.jpg);
+    background-image: url('/bg-cafe-sm.jpg');
     background-size:  100% 8% ;
   }
   
