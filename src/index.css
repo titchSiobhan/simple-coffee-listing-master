@@ -1,0 +1,132 @@
+:root {
+  --bg: #111315;
+  --content-bg: #1B1D1F;
+  --heading: #FEF7EE;
+  --text: #6F757C;
+  --price: #BEE3CC;
+  --popular: #F6C768;
+  --btn: #4D5562;
+  --sold-out: #ED735D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text)
+}
+
+h1, h2, h3 {
+  color: var(--heading);
+}
+
+#root {
+  min-height:100vh;
+  min-width: 100vw;
+  background-color: var(--bg);
+  display: flex; 
+  justify-content: center;
+  background-image: url(bg-cafe-lg.jpg);
+  background-size: 100% 20%;
+  background-position: top ;
+  background-repeat: no-repeat;
+  @media screen and (width < 460px) {
+    background-image: url(bg-cafe-sm.jpg);
+    background-size:  100% 8% ;
+  }
+  
+}
+
+.content {
+  background-color: var(--content-bg);
+  margin:  90px ;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1px;
+  border-radius: 20px;
+  @media screen and (width < 1025px) {
+   margin: 90px 40px;
+  }
+  @media screen and (width < 460px) {
+    margin: 90px 20px;
+  }
+}
+
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--heading);
+  font-weight: bold;
+  margin: 5px;
+  background-color: var(--content-bg);
+  @media screen and (width < 460px) {
+    padding: 2px 5px;
+  }
+}
+.primaryBtn {
+  background-color: var(--btn);
+  
+  
+}
+
+.price {
+  background-color: var(--price);
+  padding: 2px 7px;
+  border-radius: 5px;
+  display: flex;
+ width: fit-content;
+ 
+  font-weight: bold;
+}
+
+.hero {
+  grid-column: 3/7;
+  grid-row: 1/2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @media screen and (width < 460px) {
+    grid-column: 2/-2;
+  };
+  @media screen and (width < 1025px) {
+    grid-column: 2/-2;
+  }
+}
+
+.card-area {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+img {
+  border-radius: 10px;
+}
+
+.drink-info {
+  display: flex; 
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px 0;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.name-rating h3 {
+color: var(--text)
+}
+
+
+ 
